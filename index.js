@@ -9,8 +9,8 @@ app.use(express.urlencoded({ extended:true }));
 const port = process.env.PORT || 3000;
 
 
-app.get("/", (req, res) => {
-    res.json("hello world")
+app.get("/api/data", (req, res) => {
+    res.json({results:["hi","hello","world"]})
 })
 
 app.listen(port,()=>{
